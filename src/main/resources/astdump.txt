@@ -1,0 +1,74 @@
+TranslationUnitDecl 0x1cea880ffe8 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x1cea8810850 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x1cea88105b0 '__int128'
+|-TypedefDecl 0x1cea88108c0 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x1cea88105d0 'unsigned __int128'
+|-TypedefDecl 0x1cea8810c38 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'
+| `-RecordType 0x1cea88109b0 '__NSConstantString_tag'
+|   `-CXXRecord 0x1cea8810918 '__NSConstantString_tag'
+|-TypedefDecl 0x1cea8810cd0 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x1cea8810c90 'char *'
+|   `-BuiltinType 0x1cea8810090 'char'
+|-TypedefDecl 0x1cea8810d40 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list 'char *'
+| `-PointerType 0x1cea8810c90 'char *'
+|   `-BuiltinType 0x1cea8810090 'char'
+|-EnumDecl 0x1cea8810d98 <./inner_head.h:1:9, line:4:1> line:1:9
+| |-EnumConstantDecl 0x1cea8810e60 <line:2:5> col:5 S2N_ERR_OK 's2n_error'
+| `-EnumConstantDecl 0x1cea8810eb0 <line:3:5> col:5 referenced S2N_ERR_INVALID_PARSED_EXTENSIONS 's2n_error'
+|-TypedefDecl 0x1cea8810f58 <line:1:1, line:4:3> col:3 s2n_error 'enum s2n_error':'s2n_error'
+| `-ElaboratedType 0x1cea8810f00 'enum s2n_error' sugar
+|   `-EnumType 0x1cea8810e40 's2n_error'
+|     `-Enum 0x1cea8810d98 ''
+|-VarDecl 0x1ceaa09dff0 <line:12:1, col:13> col:13 used s2n_debug_str 'const char *'
+|-VarDecl 0x1ceaa09e0b8 <line:13:1, col:5> col:5 used s2n_errno 'int'
+|-FunctionDecl 0x1ceaa09e1f0 <line:21:1, line:24:1> line:21:5 used s2n_calculate_stacktrace 'int ()'
+| `-CompoundStmt 0x1ceaa09e310 <line:22:1, line:24:1>
+|   `-ReturnStmt 0x1ceaa09e2c8 <line:23:5, col:13>
+|     `-UnaryOperator 0x1ceaa09e2b0 <col:12, col:13> 'int' prefix '-'
+|       `-IntegerLiteral 0x1ceaa09e290 <col:13> 'int' 1
+`-FunctionDecl 0x1ceaa09e350 <main.cpp:3:1, line:8:1> line:3:5 main 'int ()'
+  `-CompoundStmt 0x1ceaa09eaf8 <col:12, line:8:1>
+    |-DeclStmt 0x1ceaa09e4b8 <line:4:5, col:27>
+    | `-VarDecl 0x1ceaa09e430 <col:5, col:26> col:9 used extension_type 'int' cinit
+    |   `-IntegerLiteral 0x1ceaa09e498 <col:26> 'int' 1
+    |-DeclStmt 0x1ceaa09e570 <line:5:5, col:33>
+    | `-VarDecl 0x1ceaa09e4e8 <col:5, col:32> col:9 used found_extension_type 'int' cinit
+    |   `-IntegerLiteral 0x1ceaa09e550 <col:32> 'int' 2
+    `-DoStmt 0x1ceaa09ead8 <./inner_head.h:19:38, col:78>
+      |-CompoundStmt 0x1ceaa09ea88 <col:41, col:68>
+      | `-IfStmt 0x1ceaa09ea68 <col:42, col:67>
+      |   |-UnaryOperator 0x1ceaa09e658 <col:47, col:53> 'bool' prefix '!' cannot overflow
+      |   | `-ParenExpr 0x1ceaa09e638 <col:48, col:53> 'bool'
+      |   |   `-ParenExpr 0x1ceaa09e618 <line:29:76, col:86> 'bool'
+      |   |     `-BinaryOperator 0x1ceaa09e5f8 <main.cpp:7:18, col:42> 'bool' '=='
+      |   |       |-ImplicitCastExpr 0x1ceaa09e5c8 <col:18> 'int' <LValueToRValue>
+      |   |       | `-DeclRefExpr 0x1ceaa09e588 <col:18> 'int' lvalue Var 0x1ceaa09e4e8 'found_extension_type' 'int'
+      |   |       `-ImplicitCastExpr 0x1ceaa09e5e0 <col:42> 'int' <LValueToRValue>
+      |   |         `-DeclRefExpr 0x1ceaa09e5a8 <col:42> 'int' lvalue Var 0x1ceaa09e430 'extension_type' 'int'
+      |   `-CompoundStmt 0x1ceaa09ea50 <./inner_head.h:19:57, col:67>
+      |     `-DoStmt 0x1ceaa09ea30 <line:17:63, col:110>
+      |       |-CompoundStmt 0x1ceaa09e9d8 <col:66, col:100>
+      |       | |-DoStmt 0x1ceaa09e970 <line:15:29, col:124>
+      |       | | |-CompoundStmt 0x1ceaa09e910 <col:32, col:114>
+      |       | | | |-BinaryOperator 0x1ceaa09e768 <col:34, <scratch space>:4:1> 'const char *' lvalue '='
+      |       | | | | |-DeclRefExpr 0x1ceaa09e670 <./inner_head.h:15:34> 'const char *' lvalue Var 0x1ceaa09dff0 's2n_debug_str' 'const char *'
+      |       | | | | `-ImplicitCastExpr 0x1ceaa09e750 <line:10:29, <scratch space>:4:1> 'const char *' <ArrayToPointerDecay>
+      |       | | | |   `-StringLiteral 0x1ceaa09e708 <./inner_head.h:10:29, <scratch space>:4:1> 'const char[32]' lvalue "Error encountered in main.cpp:7"
+      |       | | | |-BinaryOperator 0x1ceaa09e820 <./inner_head.h:15:67, col:83> 'int' lvalue '='
+      |       | | | | |-DeclRefExpr 0x1ceaa09e788 <col:67> 'int' lvalue Var 0x1ceaa09e0b8 's2n_errno' 'int'
+      |       | | | | `-ImplicitCastExpr 0x1ceaa09e808 <col:79, col:83> 'int' <IntegralCast>
+      |       | | | |   `-ParenExpr 0x1ceaa09e7e8 <col:79, col:83> 's2n_error'
+      |       | | | |     `-ParenExpr 0x1ceaa09e7c8 <line:17:79, col:85> 's2n_error'
+      |       | | | |       `-DeclRefExpr 0x1ceaa09e7a8 <main.cpp:7:58> 's2n_error' EnumConstant 0x1cea8810eb0 'S2N_ERR_INVALID_PARSED_EXTENSIONS' 's2n_error'
+      |       | | | `-CallExpr 0x1ceaa09e8f0 <./inner_head.h:15:86, col:111> 'int'
+      |       | | |   `-ImplicitCastExpr 0x1ceaa09e8d8 <col:86> 'int (*)()' <FunctionToPointerDecay>
+      |       | | |     `-DeclRefExpr 0x1ceaa09e888 <col:86> 'int ()' lvalue Function 0x1ceaa09e1f0 's2n_calculate_stacktrace' 'int ()'
+      |       | | `-ImplicitCastExpr 0x1ceaa09e958 <col:123> 'bool' <IntegralToBoolean>
+      |       | |   `-IntegerLiteral 0x1ceaa09e938 <col:123> 'int' 0
+      |       | `-ReturnStmt 0x1ceaa09e9c8 <line:17:89, col:97>
+      |       |   `-UnaryOperator 0x1ceaa09e9b0 <col:96, col:97> 'int' prefix '-'
+      |       |     `-IntegerLiteral 0x1ceaa09e990 <col:97> 'int' 1
+      |       `-ImplicitCastExpr 0x1ceaa09ea18 <col:109> 'bool' <IntegralToBoolean>
+      |         `-IntegerLiteral 0x1ceaa09e9f8 <col:109> 'int' 0
+      `-ImplicitCastExpr 0x1ceaa09eac0 <line:19:77> 'bool' <IntegralToBoolean>
+        `-IntegerLiteral 0x1ceaa09eaa0 <col:77> 'int' 0
